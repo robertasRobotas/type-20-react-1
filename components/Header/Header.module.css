@@ -1,0 +1,10 @@
+.main {
+  height: 80px;
+  background-color: rgb(95, 160, 101);
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background-color: rgb(150, 44, 44);
+  }
+}
