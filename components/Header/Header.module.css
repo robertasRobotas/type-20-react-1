@@ -3,6 +3,7 @@
   background-color: rgb(95, 160, 101);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 2rem;
   gap: 2rem;
 }
@@ -11,8 +12,66 @@
   font-size: 2rem;
 }
 
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.burgerBtn {
+  all: unset;
+  display: none;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: fixed;
+  background-color: rgb(95, 160, 101);
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenu nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
-  .main {
-    background-color: rgb(150, 44, 44);
+  .nav {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: inline-block;
+  }
+
+  .mobileMenu {
+    display: inline-block;
+    animation: mobile-menu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes mobile-menu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

@@ -19,13 +19,18 @@ const ArticlesWrapper = () => {
       imgUrl:
         "https://media.baltictimes.com/media/photos/151101_1374535502609957057e5eb_big.jpg",
     },
+    {
+      text: "Lake",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGK0n7zbxgG7rSqO1ERiVQzl6jKbY7F5Bzp9ykdnO7tw&s",
+    },
   ]);
 
   return (
     <div className={styles.main}>
-      <ArticleCard text={articles[0].text} imgUrl={articles[0].imgUrl} />
-      <ArticleCard text={articles[1].text} imgUrl={articles[1].imgUrl} />
-      <ArticleCard text={articles[2].text} imgUrl={articles[2].imgUrl} />
+      {articles.map((article) => (
+        <ArticleCard text={article.text} imgUrl={article.imgUrl} />
+      ))}
     </div>
   );
 };

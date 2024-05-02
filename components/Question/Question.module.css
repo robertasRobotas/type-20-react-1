@@ -1,0 +1,12 @@
+.main {
+  border: 2px solid rgb(198, 198, 198);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.main button {
+  width: 200px;
+}
