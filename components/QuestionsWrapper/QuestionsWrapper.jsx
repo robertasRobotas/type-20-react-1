@@ -4,18 +4,34 @@ import styles from "./QuestionsWrapper.module.css";
 
 const QuestionsWrapper = () => {
   const [question, setQuestion] = useState([
-    { question: "Be rankų, be kojų, o gražiai piešia.", answer: "Šaltis" },
-    { question: "Čia yra, čia nėra, bet niekuomet nežūna.", answer: "Mėnulis" },
-    { question: "Dieną naktį eina, niekad nesustoja.", answer: "Upė" },
-    { question: "Juoda karvė visus gyvius pargriovė.", answer: "Naktis" },
-    { question: "Meška bėga, visa giria dunda.", answer: "Vėjas" },
+    {
+      id: 1,
+      question: "Be rankų, be kojų, o gražiai piešia.",
+      answer: "Šaltis",
+    },
+    {
+      id: 2,
+      question: "Čia yra, čia nėra, bet niekuomet nežūna.",
+      answer: "Mėnulis",
+    },
+    { id: 3, question: "Dieną naktį eina, niekad nesustoja.", answer: "Upė" },
+    {
+      id: 4,
+      question: "Juoda karvė visus gyvius pargriovė.",
+      answer: "Naktis",
+    },
+    { id: 5, question: "Meška bėga, visa giria dunda.", answer: "Vėjas" },
   ]);
 
   return (
     <div className={styles.container}>
       {question.map((question) => {
         return (
-          <Question question={question.question} answer={question.answer} />
+          <Question
+            key={question.id}
+            question={question.question}
+            answer={question.answer}
+          />
         );
       })}
     </div>

@@ -25,16 +25,13 @@
 }
 
 .mobileMenu {
+  display: none;
   position: fixed;
   background-color: rgb(95, 160, 101);
   top: 80px;
   left: 0;
   width: 100%;
   height: calc(100vh - 80px);
-}
-
-.mobileMenu {
-  display: none;
 }
 
 .mobileMenu nav ul {

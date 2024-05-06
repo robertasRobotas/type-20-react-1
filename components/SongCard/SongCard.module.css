@@ -1,0 +1,19 @@
+.container {
+  background-color: aliceblue;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  margin: 0;
+  padding: 0;
+}
