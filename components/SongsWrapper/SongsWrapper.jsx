@@ -7,6 +7,7 @@ const SongsWrapper = ({ songs }) => {
       {songs &&
         songs.map((song) => (
           <SongCard
+            id={song.id}
             key={song.id}
             title={song.title}
             artist={song.artist}
